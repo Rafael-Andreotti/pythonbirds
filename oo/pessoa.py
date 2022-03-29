@@ -7,6 +7,7 @@ class Pessoa:
     def cumprimentar(self):
        return f'Olá {id(self)}'
 
+
 if __name__ == '__main__':
     luiza = Pessoa(nome='Luiza')
     rafael = Pessoa(luiza, nome='Rafael')
@@ -17,3 +18,7 @@ if __name__ == '__main__':
     print(rafael.idade)
     for filho in rafael.filhos:
         print(filho.nome)
+    rafael.sobrenome = 'Andreotti'
+    del rafael.filhos
+    print(rafael.__dict__)
+    print(luiza.__dict__)
